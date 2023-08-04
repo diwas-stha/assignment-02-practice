@@ -12,7 +12,7 @@ def get_age():
     Get age input from the user.
 
     Returns:
-        int: The age entered by the user.
+        age(int) or None: If age < 0 or age > 120: returns none else retun the age entered by the user.
     """
 
     try:
