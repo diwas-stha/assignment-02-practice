@@ -8,8 +8,16 @@ destructor for both classes to display a message when objects are destroyed.
 '''
 
 
-
 class BankAccount:
+    """
+    A class representing a bank account.
+
+    Attributes:
+        account_number (str): The account number.
+        balance (float): The current account balance.
+        account_type (str): The account type (e.g., 'Savings', 'Checking').
+    """
+
     def __init__(self, account_number, balance, account_type):
         """
         Initialize a BankAccount object.
@@ -51,10 +59,20 @@ class BankAccount:
         return self.__account_type
 
     def __del__(self):
-        print(f"Account {self.__account_number} of type {self.__account_type} is being destroyed.")
+        print(
+            f"Account {self.__account_number} of type {self.__account_type} is being destroyed.")
 
 
 class Customer:
+    """
+    A class representing a bank customer.
+
+    Attributes:
+        name (str): The customer's name.
+        age (int): The customer's age.
+        address (str): The customer's address.
+    """
+
     def __init__(self, name, age, address):
         """
         Initialize a Customer object.
@@ -78,8 +96,10 @@ class Customer:
             balance (float): The initial account balance.
             account_type (str): The account type (e.g., 'Savings', 'Checking').
         """
-        self.__bank_account = BankAccount(account_number, balance, account_type)
-        print(f"Account created for customer {self.__name} with account number {account_number} and initial balance {balance}.")
+        self.__bank_account = BankAccount(
+            account_number, balance, account_type)
+        print(
+            f"Account created for customer {self.__name} with account number {account_number} and initial balance {balance}.")
 
     def __del__(self):
         print(f"Customer {self.__name} is being removed from the system.")
