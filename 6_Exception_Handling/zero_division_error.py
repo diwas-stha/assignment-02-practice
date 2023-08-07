@@ -5,6 +5,7 @@ when the second number is zero.
 
 '''
 
+
 def division(num1, num2):
     '''
     Perform division of two input integers and handle the ZeroDivisionError
@@ -22,7 +23,7 @@ def division(num1, num2):
     except ZeroDivisionError:
         print("Error: Division by zero is not allowed!")
         return None
-        
+
 
 num1 = int(input("Enter the numerator: "))
 num2 = int(input("Enter the denominator: "))

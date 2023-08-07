@@ -1,9 +1,10 @@
 '''
-Write a Python program that takes a user input and converts it to an integer. Handle
-the ValueError and display a custom error message when the input cannot be
-converted to an integer.
+Write a Python program that takes a user input and converts it to an integer.
+Handle the ValueError and display a custom error message when the input
+cannot be converted to an integer.
 
 '''
+
 
 def convert_to_integer(user_input):
     """
@@ -11,7 +12,7 @@ def convert_to_integer(user_input):
 
     Parameters:
         user_input (str): The user input to convert.
-    
+
     Return:
         int or None: The converted integer or None if conversion fails.
 
@@ -22,6 +23,7 @@ def convert_to_integer(user_input):
     except ValueError:
         print(f"Error: '{user_input}' cannot be converted to an integer.")
         return None
+
 
 # Test the program
 user_input = input("Enter a number: ")

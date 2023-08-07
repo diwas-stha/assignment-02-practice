@@ -5,8 +5,11 @@ than 8 characters.
 
 '''
 
+
 class WeakPasswordError(Exception):
-    '''Custom exception class raised when the password is shorter than 8 characters'''
+    '''Custom exception class raised when the
+        password is shorter than 8 characters'''
+
 
 def get_password():
     """
@@ -22,6 +25,7 @@ def get_password():
         return password
     except WeakPasswordError:
         print("Password must be at least 8 characters long.")
+
 
 print("Strong password: ", get_password())
 
