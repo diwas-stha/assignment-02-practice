@@ -1,9 +1,13 @@
 '''
 Create a Python class to represent a University. The university should have
-attributes like name, location, and a list of departments. Implement encapsulation to
-protect the internal data of the University class. Create a Department class that
-inherits from the University class. The Department class should have attributes like
-department name, head of the department, and a list of courses offered. Implement
+attributes like name, location, and a list of departments.
+Implement encapsulation to
+protect the internal data of the University class. Create a Department
+class that
+inherits from the University class. The Department class should have attributes
+ like
+department name, head of the department, and a list of courses offered.
+ Implement
 polymorphism by defining a common method for both the University and
 Department classes to display their details.
 
