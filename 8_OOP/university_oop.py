@@ -8,6 +8,8 @@ polymorphism by defining a common method for both the University and
 Department classes to display their details.
 
 '''
+
+
 class University:
     '''
         A class representing a University.
@@ -15,9 +17,10 @@ class University:
         Attributes:
             name (str): The name of the university.
             location (str): The location of the university.
-            departments (list): A list of Department objects representing the departments in the university.
+            departments (list): A list of Department objects.
 
     '''
+
     def __init__(self, name, location):
         '''
         Initialize a new University object.
@@ -30,7 +33,6 @@ class University:
         self._location = location
         self._departments = []
 
-    
     def add_department(self, department):
         """
         Add a new Department to the university.
@@ -52,6 +54,17 @@ class University:
 
 
 class Department(University):
+    '''
+    A class representing deparment of university.
+
+    Attributes:
+        name (str): The name of the university.
+        location (str): The location of the university.
+        department_name (str): The name of the department.
+        head_of_department (str): The head of the department.
+
+    '''
+
     def __init__(self, name, location, department_name, head_of_department):
         '''
         Initialize a new Department object.
@@ -76,7 +89,7 @@ class Department(University):
             course (str): The name of the course to add.
         '''
         self._courses_offered.append(course)
-    
+
     def get_department_name(self):
         '''
         Get the name of the department
@@ -85,7 +98,7 @@ class Department(University):
             str: The name of the department
         '''
         return f"{self._department_name} Department"
-    
+
     def display_details(self):
         """
         Display details of the department.
@@ -100,8 +113,10 @@ class Department(University):
 
 if __name__ == "__main__":
     university = University("Kathmandu University", "Dhulikhel")
-    department1 = Department("Kathmandu University", "Block 9", "Computer Science" ,"Bal Krishna Bal")
-    department2 = Department("Kathmandu University", "Block 8", "Electrical Engineering","Prof. Hari Shyam Hari")
+    department1 = Department("Kathmandu University",
+                             "Block 9", "Computer Science", "Bal Krishna Bal")
+    department2 = Department("Kathmandu University", "Block 8",
+                             "Electrical Engineering", "Prof. Hari Shyam Hari")
 
     department1.add_course("Python Programming")
     department1.add_course("Data Structures")
